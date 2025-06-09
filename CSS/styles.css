@@ -1,0 +1,617 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden; /* Be careful with overflow: hidden if images are meant to 'bleed out' */
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section:nth-child(even) {
+    background-color: #fff;
+}
+
+.section-title-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* IMAGE SUGGESTION: Basic styling for suggested images */
+.about-image, .service-icon, .advantage-icon-img, .pricing-icon {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 15px;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+}
+.about-image {
+    float: right; /* Or right */
+    margin-right: 20px; /* Or margin-left */
+    max-width: 400px; /* Adjust */
+    border-radius: 8px;
+}
+
+
+/* Header & Navigation */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+/* For image logo if used */
+ header #logo img {
+    height: 60px;
+    margin-right : 10px;
+    vertical-align: middle;
+    border-radius: 10px;
+} 
+
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover, header nav ul li a.active {
+    color: #3498db;
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px; /* Easier to tap */
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Animation for hamburger to X */
+.menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('../IMAGES/LogoforDigi-BridgeSolutions.png') no-repeat center center/cover; /* Replace with a relevant image */
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /* Account for fixed header */
+    box-sizing: border-box; /* Ensure padding is included in height */
+}
+
+#hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#hero .slogan {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+#hero .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+.cta-button {
+    background: #3498db;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+    border: none;
+    cursor: pointer; /* Ensure it looks clickable */
+}
+
+.cta-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* About Us Section */
+#about .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start; /* Changed from center to align better with image */
+}
+#about .content img{
+   
+    background-color: #eaf2f8;
+    padding: 25px; /* Increased padding */
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+    min-width: 280px;
+}
+#about .text-content {
+    flex: 2;
+    min-width: 300px; /* Ensure it doesn't get too squished */
+}
+#about .problem-solved {
+    flex: 1;
+    background-color: #eaf2f8;
+    padding: 25px; /* Increased padding */
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+    min-width: 280px; /* Ensure it doesn't get too squished */
+}
+
+#about .problem-solved h3 {
+    margin-top: 0;
+    color: #2980b9;
+    font-size: 1.4em; /* Slightly larger */
+}
+
+#about .problem-solved ul {
+    list-style: none;
+    padding: 0;
+}
+#about .problem-solved ul li {
+    margin-bottom: 12px; /* Increased spacing */
+    padding-left: 25px; /* Increased padding */
+    position: relative;
+    line-height: 1.5;
+}
+#about .problem-solved ul li::before {
+    content: '✓';
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.1em; /* Slightly larger checkmark */
+}
+
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background: #fff;
+    padding: 30px; /* Increased padding */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #3498db; /* Keep this for accent */
+    display: flex; /* For better alignment if using icons */
+    flex-direction: column; /* For better alignment if using icons */
+    align-items: center; /* Center icon and text */
+    text-align: center; /* Center text if icon is above */
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.service-item .service-icon {
+    width: 110px; /* Adjusted for better visibility */
+    height: 110px;
+    margin-bottom: 15px; /* Space between icon and title */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaf2f8; /* Light background for contrast */
+    border-radius: 50%; /* Circular icon background */
+}
+.service-item h3 {
+    color: #3498db;
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 15px; /* Space after title before list */
+}
+.service-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left; /* Align list items to the left */
+    width: 100%; /* Ensure list takes full width if items are short */
+}
+.service-item ul li {
+    margin-bottom: 8px;
+}
+
+
+/* Why Choose Us Section */
+#why-choose-us .advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* Slightly increased gap */
+    text-align: center;
+}
+
+.advantage-item {
+    background: #eaf2f8;
+    padding: 25px; /* Increased padding */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.advantage-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.1);
+}
+
+.advantage-item .icon { /* This is for emoji icons */
+    font-size: 2.8em; /* Slightly larger emoji */
+    color: #3498db;
+    margin-bottom: 15px;
+}
+/* Styling for image icons if used instead of emoji */
+.advantage-item .advantage-icon-img {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.advantage-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+/* Pricing Section */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.pricing-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.07);
+    text-align: center;
+    border-top: 5px solid #3498db;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Helps align content vertically */
+    justify-content: space-between; /* Distribute space */
+}
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+}
+
+.pricing-card h3 {
+    font-size: 1.6em;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.pricing-card .price {
+    font-size: 2em; /* Made price larger */
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.pricing-card .price span {
+    font-size: 0.6em; /* Adjusted for new parent size */
+    font-weight: normal;
+    color: #7f8c8d;
+}
+
+.pricing-card p {
+    font-size: 0.9em;
+    color: #555;
+    flex-grow: 1; /* Allows p to take up space if cards are uneven */
+    margin-bottom: 20px; /* Space before potential button if added */
+}
+.pricing-card img {
+    margin-left: 20px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+/* You might add a .cta-button to pricing cards later */
+/* .pricing-card .cta-button {
+    margin-top: auto;
+} */
+
+
+/* Contact Section */
+#contact {
+    /* IMAGE SUGGESTION: Subtle background for contact section */
+    background-image: url('../IMAGES/ContactSectionBackGroundLight.png');
+    background-size: 100%;
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+       
+}
+#contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 35px; /* Increased padding */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    opacity: 0.8;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%; /* Use 100% and adjust padding with box-sizing */
+    padding: 12px;
+    margin-bottom: 20px; /* Increased margin */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Important for width: 100% */
+}
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+
+#contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+#contact-form button { /* This inherits .cta-button styling */
+    width: 100%;
+    padding: 15px; /* Ensure padding is consistent */
+}
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
+}
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px; /* Space between paragraphs */
+}
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-info a:hover {
+    color: #5dade2; /* Lighter blue on hover */
+    text-decoration: underline;
+}
+.contact-info img {
+    width: 30px; /* Adjust size for icons */
+    height: 30px;
+    vertical-align: middle; /* Align with text */
+    margin-right: 2px; /* Space between icon and text */
+    margin-left: 5px; /* Space between icons */
+    transition: transform 0.3s ease;
+}   
+.contact-info img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+/* IMAGE SUGGESTION: Styling for social media icons if added to footer or contact */
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 30px 0; /* Increased padding */
+}
+footer p {
+    margin: 5px 0; /* Spacing between footer lines */
+    font-size: 0.9em;
+}
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: #5dade2; /* Lighter blue on hover */
+    text-decoration: underline;
+}
+
+
+/* Responsive Design */
+@media(max-width: 968px) {
+    header #logo {
+        font-size: 1.5em;
+    }
+
+    header .container {
+        display: flex;
+        flex-direction: column; /* Stack logo and nav toggle vertically for a moment */
+        align-items: flex-start; /* Align logo to the left */
+        position: relative; /* Needed for absolute positioning of toggle */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show hamburger */
+        position: absolute;
+        top: 50%; /* Vertically center relative to logo area */
+        transform: translateY(-50%);
+        right: 20px;
+    }
+
+    header nav ul {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #2c3e50; /* Same as header to blend */
+        margin-top: 10px; /* Space below logo area */
+        position: absolute; /* Take out of flow to overlay content */
+        left: 0;
+        top: 100%; /* Position below the header container */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add shadow if it overlays */
+    }
+
+    header nav ul.active {
+        display: flex; /* Show when active */
+    }
+
+    header nav ul li {
+        display: block;
+        text-align: center;
+        margin: 0; /* Remove left margin */
+        width: 100%; /* Full width list items */
+    }
+    header nav ul li a {
+        display: block;
+        padding: 15px; /* Larger tap target */
+        border-bottom: 1px solid #3e5062; /* Separator for links */
+    }
+    header nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+
+    #hero h1 {
+        font-size: 2.5em;
+    }
+    #hero .slogan {
+        font-size: 1.3em;
+    }
+    #hero .subtitle {
+        font-size: 1em;
+        padding: 0 10px; /* Add some padding so text doesn't touch edges */
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .services-grid,
+    #why-choose-us .advantages-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr; /* Stack items */
+    }
+
+    #about .content {
+        flex-direction: column;
+    }
+    #about .about-image { /* Adjust floated image for mobile */
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto; /* Center it */
+        max-width: 80%;
+    }
+    #contact{
+    background-size: 150%; /* Cover for better responsiveness */
+    background-attachment: scroll; /* Change to scroll for better performance on mobile */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 20px; /* Reduced padding for smaller screens */
+    }
+    #contact-form {
+        padding: 20px;
+    }
+}
