@@ -174,6 +174,76 @@ header nav ul li a:hover, header nav ul li a.active {
     margin-bottom: 30px;
     max-width: 700px;
 }
+#hoverElement .lang{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    font-size: 0.2em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    color: #fff;
+    font-weight: 300;
+}
+#hoverElement .lang img{
+    position: absolute;
+    top: -105px;
+    left: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px; /* Rounded corners for flag */
+    
+    vertical-align: middle; /* Align with text */
+    margin-right: 15px; /* Space between flag and text */
+
+}
+/* language icon setting */
+.hover-container {
+  position: absolute;
+  top: 80px ;
+  right: 90px; /* Essential for positioning the absolute tooltip */
+  display: flex; /*Or block, depending on your layout*/
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.tooltip-message {
+  visibility: hidden; /* Hidden by default */
+  opacity: 0;        /* Start with 0 opacity for fade effect */
+  width: 160px;
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  position: absolute;
+  z-index: 1;
+  bottom: -100%; /* Position above the element */
+  left: 80%;
+  margin-left: -200px; /* Half of the width to center it */
+
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+}
+
+/* Optional: Arrow */
+/* .tooltip-message::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #cf0505 transparent transparent transparent;
+} */
+
+
+
+
+
+
 
 .cta-button {
     background: #3498db;
@@ -189,7 +259,10 @@ header nav ul li a:hover, header nav ul li a.active {
 
 .cta-button:hover {
     background: #2980b9;
-    transform: translateY(-2px); /* Slight lift on hover */
+    transform: translateY(-1px); /* Slight lift on hover */
+}
+.cta-button:active {
+    background: #1a5276; /* Darker shade on click */
 }
 
 /* About Us Section */
@@ -579,6 +652,8 @@ footer a:hover {
     }
     #hero .slogan {
         font-size: 1.3em;
+        margin-left: 5px;
+        margin-right: 5px;
     }
     #hero .subtitle {
         font-size: 1em;

@@ -54,19 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Don't forget your other scripts like current year, contact form, and active link on scroll
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     // Set current year in footer
@@ -138,5 +125,30 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         };
     }
+
+
+  const hoverElement = document.getElementById('hoverElement');
+  const hoverMessage = document.getElementById('hoverMessage');
+
+  // Function to show the message
+  function showMessage(messageElement) {
+    messageElement.style.visibility = 'visible';
+    messageElement.style.opacity = '1';
+  }
+
+  // Function to hide the message
+  function hideMessage(messageElement) {
+    messageElement.style.visibility = 'hidden';
+    messageElement.style.opacity = '0';
+  }
+
+  // Event listeners for the first element
+  hoverElement.addEventListener('mouseenter', () => {
+    showMessage(hoverMessage);
+  });
+  hoverElement.addEventListener('mouseleave', () => {
+    hideMessage(hoverMessage);
+  });
+
 
 });
