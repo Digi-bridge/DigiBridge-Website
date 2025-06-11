@@ -1,50 +1,51 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digi-Bridge Solutions</title>
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="icon" href="../IMAGES/LogoforDigi-BridgeSolutions.png">
-
 </head>
 <body>
-
-    <header>
-        <div class="container">
-            <a href="#hero" id="logo"> <img src="../IMAGES/Copy of 1.png" alt="logo">Digi-Bridge Solutions</a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <nav id="main-nav">
-                <ul class="nav-list">
-                    <li><a href="#hero" class="active">Accueille</a></li>
-                    <li><a href="#about">A propos </a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#why-choose-us">pour quoi nous</a></li>
-                    <li><a href="#pricing">Tarifs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+<header>
+    <div class="container">
+        <a href="#hero" id="logo">
+            <img src="../IMAGES/Copy of 1.png" alt="logo">Digi-Bridge Solutions
+        </a>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav id="main-nav" role="navigation">
+            <ul class="nav-list">
+                <li><a href="#hero" class="active">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Pourquoi nous</a></li>
+                <li><a href="#pricing">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section id="hero">
+        <div class="hero-image">
+            <a class="hero-lang-switch" id="hoverElement" tabindex="0" href="../HTML/Home.html" title="Changer la langue">
+                <img id="lang-icon" src="../IMAGES/languageIcone.png" alt="Français" />
+            </a>
         </div>
-    </header>
-
-    <main>
-        <section id="hero">
-
-            <div id="hoverElement" class="hover-container">
-                <a class="lang" href="../HTML/Home.html"><img class="lang-icon" src="../IMAGES/languageIcone.png" alt=""></a>
-                <span id="hoverMessage" class="tooltip-message">Langue</span>
-            </div>
-
-            <h1>Digi-Bridge Solutions</h1>
+        <div class="hero-content">
+            <h1 class="hero-title">Digi-Bridge Solutions</h1>
             <p class="slogan">Soutien numérique pour les étudiants, par des étudiants.</p>
             <p class="subtitle">Nous aidons les étudiants à mettre en valeur leurs compétences en ligne, à postuler de manière professionnelle et à gérer des tâches numériques, le tout 100 % en ligne.</p>
-            <a href="#contact" class="cta-button">Commencer</a>
-        </section>
+            <a href="#contact" class="cta-button">Commencer <span style="margin-left:8px;">&#8594;</span></a>
+        </div>
+    </section>
 
-        <section id="about">
+    <section id="about">
             <div class="container">
                 <div class="section-title-container">
                     <h2>À propos de Digi-Bridge</h2>
@@ -78,9 +79,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
 
-        <section id="services">
+    <section id="services">
             <div class="container">
                 
                 <div class="section-title-container">
@@ -123,9 +124,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
 
-        <section id="why-choose-us">
+    <section id="why-choose-us">
             <div class="container">
                 <div class="section-title-container">
                     <h2>Pourquoi nous choisir ?</h2>
@@ -155,7 +156,7 @@
             </div>
         </section>
 
-        <section id="pricing">
+    <section id="pricing">
             <div class="container">
                 <div class="section-title-container">
                     <h2>Nos tarifs abordables</h2>
@@ -241,14 +242,12 @@
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> Digi-Bridge Solutions. Tous droits réservés.</p>
-            <p>Slogan: "Soutien numérique pour les étudiants, par des étudiants."</p>
-            </div>
-    </footer>
-
-    <script src="../JS/script.js"></script>
+<footer>
+    <div class="container">
+        <p>&copy; <span id="currentYear"></span> Digi-Bridge Solutions. Tous droits réservés.</p>
+        <p>Slogan: "Soutien numérique pour les étudiants, par des étudiants."</p>
+    </div>
+</footer>
+<script src="../JS/script.js"></script>
 </body>
 </html>

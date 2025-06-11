@@ -14,7 +14,7 @@ body {
     max-width: 1100px;
     margin: auto;
     overflow: hidden; /* Be careful with overflow: hidden if images are meant to 'bleed out' */
-    padding: 0 20px;
+    padding: 0 0;
 }
 
 h1, h2, h3 {
@@ -64,7 +64,7 @@ section:nth-child(even) {
 header {
     background: #2c3e50;
     color: #fff;
-    padding: 15px 0;
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -74,23 +74,27 @@ header {
 
 header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between logo and nav */
     align-items: center;
+    padding: 0 10px; /* Add horizontal space inside the container */
 }
-
 header #logo {
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-weight: bold;
     text-decoration: none;
     color: #fff;
 }
 /* For image logo if used */
  header #logo img {
-    height: 60px;
-    margin-right : 10px;
+    height: 40px;
+    margin-right : 20px;
     vertical-align: middle;
     border-radius: 10px;
 } 
+header #logo span {
+    margin-left: 10px; /* Adjust as needed */
+    vertical-align: middle; /* Helps align text with image if image height varies */
+}
 
 
 header nav ul {
@@ -111,158 +115,317 @@ header nav ul li a {
     transition: color 0.3s ease;
 }
 
-header nav ul li a:hover, header nav ul li a.active {
+header nav ul li a:hover, main nav ul li a.active {
     color: #3498db;
 }
 
+
 /* Mobile Navigation */
 .menu-toggle {
-    display: none;
-    flex-direction: column;
+    display: none; /* Hidden by default on larger screens */
+    /* Add basic styling for the hamburger bars if you haven't already */
+    background: none;
+    border: none;
+    border-radius: 25px;
+    outline: none;
     cursor: pointer;
-    padding: 5px; /* Easier to tap */
+    padding: 0;
+    width: 30px; /* Example width */
+    height: 30px; /* Example height */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .menu-toggle .bar {
-    height: 3px;
-    width: 25px;
-    background-color: #fff;
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: #fff; /* Or your desired color */
+    border-radius: 2px;
+    transition: all 0.4s ease-in-out; /* For hamburger animation */
     margin: 4px 0;
-    transition: 0.4s;
 }
 
 /* Animation for hamburger to X */
-.menu-toggle.open .bar:nth-child(1) {
+
+.menu-toggle.is-active .bar:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
-.menu-toggle.open .bar:nth-child(2) {
+.menu-toggle.is-active .bar:nth-child(2) {
     opacity: 0;
 }
-.menu-toggle.open .bar:nth-child(3) {
+.menu-toggle.is-active .bar:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('../IMAGES/LogoforDigi-BridgeSolutions.png') no-repeat center center/cover; /* Replace with a relevant image */
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
+                url('../IMAGES/LogoforDigi-BridgeSolutions.png') no-repeat center center/cover;
     color: #fff;
-    height: 100vh;
+    min-height: 38rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 80px; /* Account for fixed header */
-    box-sizing: border-box; /* Ensure padding is included in height */
+    padding-top: 100px;
+    box-sizing: border-box;
+    position: relative;
 }
 
-#hero h1 {
-    font-size: 3.5em;
+.hero-lang-switch {
+    /* Remove position: absolute, top, right, and z-index */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+#hoverElement {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255,255,255,0.18);
+    border-radius: 50%;
+    padding: 7px;
+    transition: background 0.2s;
+    border: 1.5px solid #fff;
+    position: relative;
+    top: -85px;
+    right: -400px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.13);
+}
+
+#hoverElement:hover, #hoverElement:focus {
+    background: rgba(255,255,255,0.32);
+}
+
+#lang-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: block;
+}
+.hero-content h1 {
+    font-size: 2.3em;
     margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #eaf2f8;
+}
+.hero-content .slogan {
+    font-size: 1.25em;
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-weight: 400;
+    color: #eaf2f8;
+}
+.hero-content .subtitle {
+    font-size: 1.05em;
+    margin-bottom: 26px;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    color: #d6eaf8;
+}
+.hero-content .cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #3498db 0%, #5dade2 100%);
     color: #fff;
-}
-
-#hero .slogan {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
-#hero .subtitle {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    max-width: 700px;
-}
-#hoverElement .lang{
-    position: absolute;
-    top: 100px;
-    right: 50px;
-    font-size: 0.2em;
-    margin-bottom: 30px;
-    max-width: 700px;
-    color: #fff;
-    font-weight: 300;
-}
-#hoverElement .lang img{
-    position: absolute;
-    top: -105px;
-    left: 25px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50px; /* Rounded corners for flag */
-    
-    vertical-align: middle; /* Align with text */
-    margin-right: 15px; /* Space between flag and text */
-
-}
-/* language icon setting */
-.hover-container {
-  position: absolute;
-  top: 80px ;
-  right: 90px; /* Essential for positioning the absolute tooltip */
-  display: flex; /*Or block, depending on your layout*/
-  padding: 10px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  margin: 20px;
-}
-
-.tooltip-message {
-  visibility: hidden; /* Hidden by default */
-  opacity: 0;        /* Start with 0 opacity for fade effect */
-  width: 160px;
-  background-color: #fff;
-  color: black;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
-  position: absolute;
-  z-index: 1;
-  bottom: -100%; /* Position above the element */
-  left: 80%;
-  margin-left: -200px; /* Half of the width to center it */
-
-  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
-}
-
-/* Optional: Arrow */
-/* .tooltip-message::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #cf0505 transparent transparent transparent;
-} */
-
-
-
-
-
-
-
-.cta-button {
-    background: #3498db;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+    font-size: 1.15em;
+    font-weight: 700;
+    padding: 16px 38px;
     border: none;
-    cursor: pointer; /* Ensure it looks clickable */
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(52,152,219,0.13);
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: 
+        background 0.3s,
+        box-shadow 0.3s,
+        transform 0.2s,
+        color 0.3s;
+    cursor: pointer;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
 }
 
-.cta-button:hover {
-    background: #2980b9;
-    transform: translateY(-1px); /* Slight lift on hover */
+.cta-button:hover,
+.cta-button:focus {
+    background: linear-gradient(90deg, #217dbb 0%, #3498db 100%);
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(52,152,219,0.22);
+    transform: translateY(-2px) scale(1.03);
+    outline: none;
 }
+
 .cta-button:active {
-    background: #1a5276; /* Darker shade on click */
+    background: #217dbb;
+    color: #eaf2f8;
+    transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+    .hero-lang-switch {
+        top: 14px;
+        right: 12px;
+    }
+    #hero {
+        padding-top: 70px;
+        min-height: 28rem;
+    }
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+    .hero-content .slogan,
+    .hero-content .subtitle {
+        font-size: 0.98em;
+        margin-top: 45px;
+    }
+    .hero-content .cta-button {
+        font-size: 1em;
+        padding: 11px 0;
+        width: 90vw;
+        max-width: 320px;
+    }
+#hoverElement {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255,255,255,0.18);
+    border-radius: 50%;
+    padding: 7px;
+    transition: background 0.2s;
+    border: 1.5px solid #fff;
+    position: relative;
+    top: 73px;
+    right: -250px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.13);
+}
+}
+
+@media (max-width: 600px) {
+    #hero {
+        min-height: 20rem;
+        padding-top: 56px;
+    }
+    .hero-lang-switch {
+        margin-top: 60px;
+        padding-right: 8px;
+        margin-bottom: 16px;
+    }
+    .hero-content h1 {
+        font-size: 1.08em;
+    }
+    .hero-content .cta-button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 0.98em;
+    }
+    .menu-toggle {
+        display: flex;
+        z-index: 1101;
+        background: rgba(44,62,80,0.95);
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 12px rgba(44,62,80,0.18);
+        transition: background 0.2s;
+        position: relative;
+    }
+    .menu-toggle .bar {
+        width: 28px;
+        height: 4px;
+        margin: 4px 0;
+        background: #fff;
+        border-radius: 2px;
+        transition: all 0.4s cubic-bezier(.4,2,.6,1);
+    }
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 7px);
+    }
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -7px);
+    }
+
+    #main-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 50vw;
+        width: 50vw;
+        min-width: 180px;
+        max-width: 320px;
+        background: rgba(44,62,80,0.96);
+        backdrop-filter: blur(8px);
+        border-radius: 18px 0 0 18px;
+        box-shadow: -4px 0 32px rgba(44,62,80,0.22);
+        animation: slideDownNav 0.35s cubic-bezier(.4,2,.6,1);
+        z-index: 1100;
+        /* Change height to fit content */
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    #main-nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    #main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        align-items: flex-end;
+    }
+    #main-nav ul li {
+        display: block;
+        margin: 0;
+        text-align: right;
+        border-bottom: 1px solid #34495e;
+        width: 100%;
+    }
+    #main-nav ul li:last-child {
+        border-bottom: none;
+    }
+    #main-nav ul li a {
+        padding: 16px 20px;
+        display: block;
+        font-size: 1.08em;
+        letter-spacing: 0.5px;
+        color: #fff;
+        transition: background 0.2s, color 0.2s;
+        border-radius: 8px;
+        margin: 4px 8px 4px 0; /* Add small margin to the right */
+        text-align: right;
+    }
+    #main-nav ul li a:hover,
+    #main-nav ul li a.active {
+        background: linear-gradient(90deg, #3498db 0%, #5dade2 100%);
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(52,152,219,0.13);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        font-size: 0.90em; /* Slightly smaller than normal (e.g., ~14.7px if base is 16px) */
+    }
+    /* Optionally, reduce section titles a bit more for balance */
+    .section-title-container h2 {
+        font-size: 1em;
+    }
 }
 
 /* About Us Section */
@@ -595,98 +758,218 @@ footer a:hover {
 
 
 /* Responsive Design */
-@media(max-width: 968px) {
-    header #logo {
-        font-size: 1.5em;
-    }
+/* Responsive Design */
 
+/* Tablet adjustments */
+@media (max-width: 900px) {
+    .container {
+        width: 98%;
+        padding: 0 12px;
+    }
     header .container {
-        display: flex;
-        flex-direction: column; /* Stack logo and nav toggle vertically for a moment */
-        align-items: flex-start; /* Align logo to the left */
-        position: relative; /* Needed for absolute positioning of toggle */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 0;
+        gap: 10px;
     }
-
-    .menu-toggle {
-        display: flex; /* Show hamburger */
-        position: absolute;
-        top: 50%; /* Vertically center relative to logo area */
-        transform: translateY(-50%);
-        right: 20px;
-    }
-
     header nav ul {
-        display: none; /* Hidden by default */
+        margin-top: 12px;
+        gap: 12px;
+    }
+    #about .content {
+        flex-direction: column;
+        gap: 28px;
+    }
+    .about-image {
+        float: none;
+        margin: 0 auto 18px auto;
+        display: block;
+        max-width: 320px;
+    }
+    .services-grid,
+    .pricing-grid,
+    #why-choose-us .advantages-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+    }
+    .service-item,
+    .pricing-card,
+    .advantage-item {
+        margin-bottom: 18px;
+    }
+    .section-title-container h2 {
+        font-size: 2em;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    #hoverElement {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255,255,255,0.18);
+    border-radius: 50%;
+    padding: 7px;
+    transition: background 0.2s;
+    border: 1.5px solid #fff;
+    position: relative;
+    top: -55px;
+    right: -240px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.13);
+}
+
+    .container {
+        width: 100%;
+        padding: 0 6px;
+    }
+    header {
+        padding: 6px 0;
+        box-shadow: 0 2px 10px rgba(44,62,80,0.13);
+    }
+    header .container {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 6px;
+        gap: 0;
+    }
+    /* Hamburger menu visible */
+    .menu-toggle {
+        display: flex;
+        z-index: 1101;
+        background: rgba(44,62,80,0.95);
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 12px rgba(44,62,80,0.18);
+        transition: background 0.2s;
+        position: relative;
+    }
+    .menu-toggle .bar {
+        width: 28px;
+        height: 4px;
+        margin: 4px 0;
+        background: #fff;
+        border-radius: 2px;
+        transition: all 0.4s cubic-bezier(.4,2,.6,1);
+    }
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 7px);
+    }
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -7px);
+    }
+
+    /* Hide nav by default on mobile */
+    #main-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 50vw;
+        width: 50vw;
+        min-width: 180px;
+        max-width: 320px;
+        background: rgba(44,62,80,0.96);
+        backdrop-filter: blur(8px);
+        border-radius: 18px 0 0 18px;
+        box-shadow: -4px 0 32px rgba(44,62,80,0.22);
+        animation: slideDownNav 0.35s cubic-bezier(.4,2,.6,1);
+        z-index: 1100;
+        /* Change height to fit content */
+        height: auto;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    #main-nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    #main-nav ul {
         flex-direction: column;
         width: 100%;
-        background-color: #2c3e50; /* Same as header to blend */
-        margin-top: 10px; /* Space below logo area */
-        position: absolute; /* Take out of flow to overlay content */
-        left: 0;
-        top: 100%; /* Position below the header container */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add shadow if it overlays */
+        padding: 0;
+        margin: 0;
+        align-items: flex-end;
     }
-
-    header nav ul.active {
-        display: flex; /* Show when active */
-    }
-
-    header nav ul li {
+    #main-nav ul li {
         display: block;
-        text-align: center;
-        margin: 0; /* Remove left margin */
-        width: 100%; /* Full width list items */
+        margin: 0;
+        text-align: right;
+        border-bottom: 1px solid #34495e;
+        width: 100%;
     }
-    header nav ul li a {
-        display: block;
-        padding: 15px; /* Larger tap target */
-        border-bottom: 1px solid #3e5062; /* Separator for links */
-    }
-    header nav ul li:last-child a {
+    #main-nav ul li:last-child {
         border-bottom: none;
     }
-
-
-    #hero h1 {
-        font-size: 2.5em;
+    #main-nav ul li a {
+        padding: 16px 20px;
+        display: block;
+        font-size: 1.08em;
+        letter-spacing: 0.5px;
+        color: #fff;
+        transition: background 0.2s, color 0.2s;
+        border-radius: 8px;
+        margin: 4px 8px 4px 0; /* Add small margin to the right */
+        text-align: right;
     }
-    #hero .slogan {
-        font-size: 1.3em;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    #hero .subtitle {
-        font-size: 1em;
-        padding: 0 10px; /* Add some padding so text doesn't touch edges */
-    }
-
-    h2 {
-        font-size: 2em;
+    #main-nav ul li a:hover,
+    #main-nav ul li a.active {
+        background: linear-gradient(90deg, #3498db 0%, #5dade2 100%);
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(52,152,219,0.13);
     }
 
     .services-grid,
-    #why-choose-us .advantages-grid,
-    .pricing-grid {
-        grid-template-columns: 1fr; /* Stack items */
+    .pricing-grid,
+    #why-choose-us .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 0 4px;
+    }
+    .service-item,
+    .pricing-card,
+    .advantage-item {
+        padding: 12px 6px;
+        font-size: 0.95em;
+    }
+    .service-item .service-icon,
+    .advantage-item .advantage-icon-img,
+    .pricing-card img {
+        max-width: 60px;
+        max-height: 60px;
+    }
+}
+
+/* Smallest screens */
+@media (max-width: 400px) {
+        header .container {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 6px;
+        gap: 0;
     }
 
-    #about .content {
-        flex-direction: column;
+    h2, .section-title-container h2 {
+        font-size: 1em;
     }
-    #about .about-image { /* Adjust floated image for mobile */
-        float: none;
-        display: block;
-        margin: 0 auto 20px auto; /* Center it */
-        max-width: 80%;
+    .cta-button {
+        font-size: 0.95em;
+        padding: 12px 0;
     }
-    #contact{
-    background-size: 150%; /* Cover for better responsiveness */
-    background-attachment: scroll; /* Change to scroll for better performance on mobile */
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 40px 20px; /* Reduced padding for smaller screens */
+    .service-item,
+    .pricing-card,
+    .advantage-item {
+        padding: 12px 4px;
     }
-    #contact-form {
-        padding: 20px;
+    #main-nav ul li a {
+        padding: 12px 12px;
     }
+    
 }
