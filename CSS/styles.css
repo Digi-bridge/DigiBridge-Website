@@ -13,8 +13,8 @@ body {
     width: 90%;
     max-width: 1100px;
     margin: auto;
-    overflow: hidden; /* Be careful with overflow: hidden if images are meant to 'bleed out' */
-    padding: 0 0;
+    overflow: hidden;
+    padding: 0;
 }
 
 h1, h2, h3 {
@@ -43,22 +43,18 @@ section:nth-child(even) {
     margin-bottom: 40px;
 }
 
-/* IMAGE SUGGESTION: Basic styling for suggested images */
+/* Image Styles */
 .about-image, .service-icon, .advantage-icon-img, .pricing-icon {
-    max-width: 100px; /* Adjust as needed */
+    max-width: 100px;
     height: auto;
     margin-bottom: 15px;
-    /* display: block;
-    margin-left: auto;
-    margin-right: auto; */
 }
 .about-image {
-    float: right; /* Or right */
-    margin-right: 20px; /* Or margin-left */
-    max-width: 400px; /* Adjust */
+    float: right;
+    margin-right: 20px;
+    max-width: 400px;
     border-radius: 8px;
 }
-
 
 /* Header & Navigation */
 header {
@@ -71,12 +67,11 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 header .container {
     display: flex;
-    justify-content: space-between; /* Space between logo and nav */
+    justify-content: space-between;
     align-items: center;
-    padding: 0 10px; /* Add horizontal space inside the container */
+    padding: 0 10px;
 }
 header #logo {
     font-size: 1.2em;
@@ -84,71 +79,60 @@ header #logo {
     text-decoration: none;
     color: #fff;
 }
-/* For image logo if used */
- header #logo img {
+header #logo img {
     height: 40px;
-    margin-right : 20px;
+    margin-right: 20px;
+    margin-left: 10px;
     vertical-align: middle;
     border-radius: 10px;
-} 
-header #logo span {
-    margin-left: 10px; /* Adjust as needed */
-    vertical-align: middle; /* Helps align text with image if image height varies */
 }
-
-
+header #logo span {
+    margin-left: 10px;
+    vertical-align: middle;
+}
 header nav ul {
     padding: 0;
     list-style: none;
     margin: 0;
 }
-
 header nav ul li {
     display: inline;
-    margin-left: 20px;
+    margin-left: 10px;
 }
-
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1em;
     transition: color 0.3s ease;
 }
-
 header nav ul li a:hover, main nav ul li a.active {
     color: #3498db;
 }
 
-
 /* Mobile Navigation */
 .menu-toggle {
-    display: none; /* Hidden by default on larger screens */
-    /* Add basic styling for the hamburger bars if you haven't already */
+    display: none;
     background: none;
     border: none;
     border-radius: 25px;
     outline: none;
     cursor: pointer;
     padding: 0;
-    width: 30px; /* Example width */
-    height: 30px; /* Example height */
+    width: 30px;
+    height: 30px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-
 .menu-toggle .bar {
     display: block;
     width: 100%;
     height: 6px;
-    background-color: #fff; /* Or your desired color */
+    background-color: #fff;
     border-radius: 2px;
-    transition: all 0.4s ease-in-out; /* For hamburger animation */
+    transition: all 0.4s ease-in-out;
     margin: 4px 0;
 }
-
-/* Animation for hamburger to X */
-
 .menu-toggle.is-active .bar:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -158,7 +142,6 @@ header nav ul li a:hover, main nav ul li a.active {
 .menu-toggle.is-active .bar:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
 }
-
 
 /* Hero Section */
 #hero {
@@ -175,15 +158,12 @@ header nav ul li a:hover, main nav ul li a.active {
     box-sizing: border-box;
     position: relative;
 }
-
 .hero-lang-switch {
-    /* Remove position: absolute, top, right, and z-index */
     display: flex;
     align-items: center;
     justify-content: flex-end;
     box-sizing: border-box;
 }
-
 #hoverElement {
     display: flex;
     align-items: center;
@@ -194,15 +174,13 @@ header nav ul li a:hover, main nav ul li a.active {
     transition: background 0.2s;
     border: 1.5px solid #fff;
     position: relative;
-    top: -85px;
-    right: -400px;
+    top: -35px;
+    /* right: -400px; */
     box-shadow: 0 2px 8px rgba(44,62,80,0.13);
 }
-
 #hoverElement:hover, #hoverElement:focus {
     background: rgba(255,255,255,0.32);
 }
-
 #lang-icon {
     width: 22px;
     height: 22px;
@@ -210,8 +188,8 @@ header nav ul li a:hover, main nav ul li a.active {
     display: block;
 }
 .hero-content h1 {
-    font-size: 2.3em;
-    margin-bottom: 10px;
+    font-size: 1.9em;
+    margin-bottom: 50px;
     font-weight: 700;
     letter-spacing: 0.5px;
     color: #eaf2f8;
@@ -219,13 +197,13 @@ header nav ul li a:hover, main nav ul li a.active {
 .hero-content .slogan {
     font-size: 1.25em;
     margin-top: 0;
-    margin-bottom: 14px;
+    margin-bottom: 50px;
     font-weight: 400;
     color: #eaf2f8;
 }
 .hero-content .subtitle {
     font-size: 1.05em;
-    margin-bottom: 26px;
+    margin-bottom: 50px;
     max-width: 90vw;
     margin-left: auto;
     margin-right: auto;
@@ -253,7 +231,6 @@ header nav ul li a:hover, main nav ul li a.active {
     position: relative;
     overflow: hidden;
 }
-
 .cta-button:hover,
 .cta-button:focus {
     background: linear-gradient(90deg, #217dbb 0%, #3498db 100%);
@@ -262,170 +239,10 @@ header nav ul li a:hover, main nav ul li a.active {
     transform: translateY(-2px) scale(1.03);
     outline: none;
 }
-
 .cta-button:active {
     background: #217dbb;
     color: #eaf2f8;
     transform: scale(0.98);
-}
-
-@media (max-width: 900px) {
-    .hero-lang-switch {
-        top: 14px;
-        right: 12px;
-    }
-    #hero {
-        padding-top: 70px;
-        min-height: 28rem;
-    }
-    .hero-content h1 {
-        font-size: 1.5em;
-    }
-    .hero-content .slogan,
-    .hero-content .subtitle {
-        font-size: 0.98em;
-        margin-top: 45px;
-    }
-    .hero-content .cta-button {
-        font-size: 1em;
-        padding: 11px 0;
-        width: 90vw;
-        max-width: 320px;
-    }
-#hoverElement {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    background: rgba(255,255,255,0.18);
-    border-radius: 50%;
-    padding: 7px;
-    transition: background 0.2s;
-    border: 1.5px solid #fff;
-    position: relative;
-    top: 73px;
-    right: -250px;
-    box-shadow: 0 2px 8px rgba(44,62,80,0.13);
-}
-}
-
-@media (max-width: 600px) {
-    #hero {
-        min-height: 20rem;
-        padding-top: 56px;
-    }
-    .hero-lang-switch {
-        margin-top: 60px;
-        padding-right: 8px;
-        margin-bottom: 16px;
-    }
-    .hero-content h1 {
-        font-size: 1.08em;
-    }
-    .hero-content .cta-button {
-        width: 100%;
-        padding: 10px 0;
-        font-size: 0.98em;
-    }
-    .menu-toggle {
-        display: flex;
-        z-index: 1101;
-        background: rgba(44,62,80,0.95);
-        border-radius: 50%;
-        width: 44px;
-        height: 44px;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 2px 12px rgba(44,62,80,0.18);
-        transition: background 0.2s;
-        position: relative;
-    }
-    .menu-toggle .bar {
-        width: 28px;
-        height: 4px;
-        margin: 4px 0;
-        background: #fff;
-        border-radius: 2px;
-        transition: all 0.4s cubic-bezier(.4,2,.6,1);
-    }
-    .menu-toggle.is-active .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-6px, 7px);
-    }
-    .menu-toggle.is-active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.is-active .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-6px, -7px);
-    }
-
-    #main-nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        left: 50vw;
-        width: 50vw;
-        min-width: 180px;
-        max-width: 320px;
-        background: rgba(44,62,80,0.96);
-        backdrop-filter: blur(8px);
-        border-radius: 18px 0 0 18px;
-        box-shadow: -4px 0 32px rgba(44,62,80,0.22);
-        animation: slideDownNav 0.35s cubic-bezier(.4,2,.6,1);
-        z-index: 1100;
-        /* Change height to fit content */
-        height: auto;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-    #main-nav.active {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-    #main-nav ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        align-items: flex-end;
-    }
-    #main-nav ul li {
-        display: block;
-        margin: 0;
-        text-align: right;
-        border-bottom: 1px solid #34495e;
-        width: 100%;
-    }
-    #main-nav ul li:last-child {
-        border-bottom: none;
-    }
-    #main-nav ul li a {
-        padding: 16px 20px;
-        display: block;
-        font-size: 1.08em;
-        letter-spacing: 0.5px;
-        color: #fff;
-        transition: background 0.2s, color 0.2s;
-        border-radius: 8px;
-        margin: 4px 8px 4px 0; /* Add small margin to the right */
-        text-align: right;
-    }
-    #main-nav ul li a:hover,
-    #main-nav ul li a.active {
-        background: linear-gradient(90deg, #3498db 0%, #5dade2 100%);
-        color: #fff;
-        box-shadow: 0 2px 8px rgba(52,152,219,0.13);
-    }
-}
-
-@media (max-width: 600px) {
-    .container {
-        font-size: 0.90em; /* Slightly smaller than normal (e.g., ~14.7px if base is 16px) */
-    }
-    /* Optionally, reduce section titles a bit more for balance */
-    .section-title-container h2 {
-        font-size: 1em;
-    }
 }
 
 /* About Us Section */
@@ -433,42 +250,40 @@ header nav ul li a:hover, main nav ul li a.active {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    align-items: flex-start; /* Changed from center to align better with image */
+    align-items: flex-start;
+    padding: 0 10px;
 }
 #about .content img{
-   
     background-color: #eaf2f8;
-    padding: 25px; /* Increased padding */
+    padding: 25px;
     border-radius: 8px;
     border-left: 5px solid #3498db;
     min-width: 280px;
 }
 #about .text-content {
     flex: 2;
-    min-width: 300px; /* Ensure it doesn't get too squished */
+    min-width: 300px;
 }
 #about .problem-solved {
     flex: 1;
     background-color: #eaf2f8;
-    padding: 25px; /* Increased padding */
+    padding: 25px;
     border-radius: 8px;
     border-left: 5px solid #3498db;
-    min-width: 280px; /* Ensure it doesn't get too squished */
+    min-width: 280px;
 }
-
 #about .problem-solved h3 {
     margin-top: 0;
     color: #2980b9;
-    font-size: 1.4em; /* Slightly larger */
+    font-size: 1.4em;
 }
-
 #about .problem-solved ul {
     list-style: none;
     padding: 0;
 }
 #about .problem-solved ul li {
-    margin-bottom: 12px; /* Increased spacing */
-    padding-left: 25px; /* Increased padding */
+    margin-bottom: 12px;
+    padding-left: 25px;
     position: relative;
     line-height: 1.5;
 }
@@ -478,9 +293,8 @@ header nav ul li a:hover, main nav ul li a.active {
     position: absolute;
     left: 0;
     font-weight: bold;
-    font-size: 1.1em; /* Slightly larger checkmark */
+    font-size: 1.1em;
 }
-
 
 /* Services Section */
 .services-grid {
@@ -488,62 +302,58 @@ header nav ul li a:hover, main nav ul li a.active {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
-
 .service-item {
     background: #fff;
-    padding: 30px; /* Increased padding */
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.07);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 4px solid #3498db; /* Keep this for accent */
-    display: flex; /* For better alignment if using icons */
-    flex-direction: column; /* For better alignment if using icons */
-    align-items: center; /* Center icon and text */
-    text-align: center; /* Center text if icon is above */
+    border-left: 4px solid #3498db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
-
 .service-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 .service-item .service-icon {
-    width: 110px; /* Adjusted for better visibility */
+    width: 110px;
     height: 110px;
-    margin-bottom: 15px; /* Space between icon and title */
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #eaf2f8; /* Light background for contrast */
-    border-radius: 50%; /* Circular icon background */
+    background-color: #eaf2f8;
+    border-radius: 50%;
 }
 .service-item h3 {
     color: #3498db;
     margin-top: 0;
     font-size: 1.5em;
-    margin-bottom: 15px; /* Space after title before list */
+    margin-bottom: 15px;
 }
 .service-item ul {
     list-style-type: disc;
     padding-left: 20px;
-    text-align: left; /* Align list items to the left */
-    width: 100%; /* Ensure list takes full width if items are short */
+    text-align: left;
+    width: 100%;
 }
 .service-item ul li {
     margin-bottom: 8px;
 }
 
-
 /* Why Choose Us Section */
 #why-choose-us .advantages-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px; /* Slightly increased gap */
+    gap: 25px;
     text-align: center;
 }
-
 .advantage-item {
     background: #eaf2f8;
-    padding: 25px; /* Increased padding */
+    padding: 25px;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -551,19 +361,16 @@ header nav ul li a:hover, main nav ul li a.active {
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(44, 62, 80, 0.1);
 }
-
-.advantage-item .icon { /* This is for emoji icons */
-    font-size: 2.8em; /* Slightly larger emoji */
+.advantage-item .icon {
+    font-size: 2.8em;
     color: #3498db;
     margin-bottom: 15px;
 }
-/* Styling for image icons if used instead of emoji */
 .advantage-item .advantage-icon-img {
     width: 150px;
     height: 100px;
     margin-bottom: 15px;
 }
-
 .advantage-item h3 {
     font-size: 1.3em;
     margin-bottom: 10px;
@@ -576,7 +383,6 @@ header nav ul li a:hover, main nav ul li a.active {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
-
 .pricing-card {
     background: #fff;
     padding: 30px;
@@ -586,37 +392,34 @@ header nav ul li a:hover, main nav ul li a.active {
     border-top: 5px solid #3498db;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    flex-direction: column; /* Helps align content vertically */
-    justify-content: space-between; /* Distribute space */
+    flex-direction: column;
+    justify-content: space-between;
 }
 .pricing-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 25px rgba(0,0,0,0.12);
 }
-
 .pricing-card h3 {
     font-size: 1.6em;
     color: #3498db;
     margin-bottom: 15px;
 }
-
 .pricing-card .price {
-    font-size: 2em; /* Made price larger */
+    font-size: 2em;
     font-weight: bold;
     color: #2c3e50;
     margin-bottom: 20px;
 }
 .pricing-card .price span {
-    font-size: 0.6em; /* Adjusted for new parent size */
+    font-size: 0.6em;
     font-weight: normal;
     color: #7f8c8d;
 }
-
 .pricing-card p {
     font-size: 0.9em;
     color: #555;
-    flex-grow: 1; /* Allows p to take up space if cards are uneven */
-    margin-bottom: 20px; /* Space before potential button if added */
+    flex-grow: 1;
+    margin-bottom: 20px;
 }
 .pricing-card img {
     margin-left: 20px;
@@ -625,50 +428,40 @@ header nav ul li a:hover, main nav ul li a.active {
     margin-bottom: 15px;
 }
 
-/* You might add a .cta-button to pricing cards later */
-/* .pricing-card .cta-button {
-    margin-top: auto;
-} */
-
-
 /* Contact Section */
 #contact {
-    /* IMAGE SUGGESTION: Subtle background for contact section */
     background-image: url('../IMAGES/ContactSectionBackGroundLight.png');
     background-size: 100%;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     padding: 60px 0;
-       
 }
 #contact-form {
     max-width: 700px;
     margin: 0 auto;
     background: #fff;
-    padding: 35px; /* Increased padding */
+    padding: 35px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     opacity: 0.8;
 }
-
 #contact-form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
     color: #555;
 }
-
 #contact-form input[type="text"],
 #contact-form input[type="email"],
 #contact-form textarea {
-    width: 100%; /* Use 100% and adjust padding with box-sizing */
+    width: 100%;
     padding: 12px;
-    margin-bottom: 20px; /* Increased margin */
+    margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
-    box-sizing: border-box; /* Important for width: 100% */
+    box-sizing: border-box;
 }
 #contact-form input[type="text"]:focus,
 #contact-form input[type="email"]:focus,
@@ -677,16 +470,13 @@ header nav ul li a:hover, main nav ul li a.active {
     outline: none;
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
-
-
 #contact-form textarea {
     height: 120px;
     resize: vertical;
 }
-
-#contact-form button { /* This inherits .cta-button styling */
+#contact-form button {
     width: 100%;
-    padding: 15px; /* Ensure padding is consistent */
+    padding: 15px;
 }
 .contact-info {
     text-align: center;
@@ -694,7 +484,7 @@ header nav ul li a:hover, main nav ul li a.active {
 }
 .contact-info p {
     font-size: 1.1em;
-    margin-bottom: 10px; /* Space between paragraphs */
+    margin-bottom: 10px;
 }
 .contact-info a {
     color: #3498db;
@@ -702,21 +492,20 @@ header nav ul li a:hover, main nav ul li a.active {
     transition: color 0.3s ease;
 }
 .contact-info a:hover {
-    color: #5dade2; /* Lighter blue on hover */
+    color: #5dade2;
     text-decoration: underline;
 }
 .contact-info img {
-    width: 30px; /* Adjust size for icons */
+    width: 30px;
     height: 30px;
-    vertical-align: middle; /* Align with text */
-    margin-right: 2px; /* Space between icon and text */
-    margin-left: 5px; /* Space between icons */
+    vertical-align: middle;
+    margin-right: 2px;
+    margin-left: 5px;
     transition: transform 0.3s ease;
-}   
-.contact-info img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
 }
-/* IMAGE SUGGESTION: Styling for social media icons if added to footer or contact */
+.contact-info img:hover {
+    transform: scale(1.1);
+}
 .social-icons {
     margin-top: 20px;
     text-align: center;
@@ -734,16 +523,15 @@ header nav ul li a:hover, main nav ul li a.active {
     transform: scale(1.1);
 }
 
-
 /* Footer */
 footer {
     background: #2c3e50;
     color: #bdc3c7;
     text-align: center;
-    padding: 30px 0; /* Increased padding */
+    padding: 30px 0;
 }
 footer p {
-    margin: 5px 0; /* Spacing between footer lines */
+    margin: 5px 0;
     font-size: 0.9em;
 }
 footer a {
@@ -752,15 +540,15 @@ footer a {
     transition: color 0.3s ease;
 }
 footer a:hover {
-    color: #5dade2; /* Lighter blue on hover */
+    color: #5dade2;
     text-decoration: underline;
 }
 
+/* ===========================
+   Responsive Design Queries
+   =========================== */
 
-/* Responsive Design */
-/* Responsive Design */
-
-/* Tablet adjustments */
+/* -------- Tablet adjustments (max-width: 900px) -------- */
 @media (max-width: 900px) {
     .container {
         width: 98%;
@@ -800,28 +588,23 @@ footer a:hover {
     .section-title-container h2 {
         font-size: 2em;
     }
+        #hoverElement {
+        top: 25px;
+        right: 0;
+        padding: 5px;
+    }
+
 }
 
-/* Mobile adjustments */
+/* -------- Mobile adjustments (max-width: 600px) -------- */
 @media (max-width: 600px) {
-    #hoverElement {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    background: rgba(255,255,255,0.18);
-    border-radius: 50%;
-    padding: 7px;
-    transition: background 0.2s;
-    border: 1.5px solid #fff;
-    position: relative;
-    top: -55px;
-    right: -240px;
-    box-shadow: 0 2px 8px rgba(44,62,80,0.13);
-}
-
+    html, body {
+        font-size: 14px;
+    }
     .container {
         width: 100%;
-        padding: 0 6px;
+        padding: 0 0vw;
+        font-size: 0.95em;
     }
     header {
         padding: 6px 0;
@@ -830,17 +613,23 @@ footer a:hover {
     header .container {
         flex-direction: row;
         align-items: center;
-        padding: 0 6px;
+        padding: 0 0;
         gap: 0;
     }
-    /* Hamburger menu visible */
+    main .container {
+        gap: 10px;
+    }
+    #logo img {
+        height: 32px;
+        margin-right: 10px;
+    }
     .menu-toggle {
         display: flex;
         z-index: 1101;
         background: rgba(44,62,80,0.95);
         border-radius: 50%;
-        width: 44px;
-        height: 44px;
+        width: 40px;
+        height: 40px;
         justify-content: center;
         align-items: center;
         box-shadow: 0 2px 12px rgba(44,62,80,0.18);
@@ -848,32 +637,30 @@ footer a:hover {
         position: relative;
     }
     .menu-toggle .bar {
-        width: 28px;
-        height: 4px;
+        width: 24px;
+        height: 3px;
         margin: 4px 0;
         background: #fff;
         border-radius: 2px;
         transition: all 0.4s cubic-bezier(.4,2,.6,1);
     }
     .menu-toggle.is-active .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-6px, 7px);
+        transform: rotate(-45deg) translate(-5px, 7px);
     }
     .menu-toggle.is-active .bar:nth-child(2) {
         opacity: 0;
     }
     .menu-toggle.is-active .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-6px, -7px);
+        transform: rotate(45deg) translate(-5px, -7px);
     }
-
-    /* Hide nav by default on mobile */
     #main-nav {
         display: none;
         position: absolute;
-        top: 60px;
+        top: 56px;
         right: 0;
         left: 50vw;
         width: 50vw;
-        min-width: 180px;
+        min-width: 140px;
         max-width: 320px;
         background: rgba(44,62,80,0.96);
         backdrop-filter: blur(8px);
@@ -881,7 +668,6 @@ footer a:hover {
         box-shadow: -4px 0 32px rgba(44,62,80,0.22);
         animation: slideDownNav 0.35s cubic-bezier(.4,2,.6,1);
         z-index: 1100;
-        /* Change height to fit content */
         height: auto;
         max-height: 90vh;
         overflow-y: auto;
@@ -909,14 +695,14 @@ footer a:hover {
         border-bottom: none;
     }
     #main-nav ul li a {
-        padding: 16px 20px;
+        padding: 12px 12px;
         display: block;
-        font-size: 1.08em;
+        font-size: 1em;
         letter-spacing: 0.5px;
         color: #fff;
         transition: background 0.2s, color 0.2s;
         border-radius: 8px;
-        margin: 4px 8px 4px 0; /* Add small margin to the right */
+        margin: 2px 6px 2px 0;
         text-align: right;
     }
     #main-nav ul li a:hover,
@@ -925,37 +711,95 @@ footer a:hover {
         color: #fff;
         box-shadow: 0 2px 8px rgba(52,152,219,0.13);
     }
-
+    #hero {
+        min-height: 18rem;
+        padding-top: 56px;
+    }
+    .hero-lang-switch {
+        margin-top: 40px;
+        padding-right: 6px;
+        margin-bottom: 10px;
+    }
+    #hoverElement {
+        top: 0;
+        right: 0;
+        padding: 5px;
+    }
+    #lang-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .hero-content h1 {
+        font-size: 1.1em;
+    }
+    .hero-content .slogan,
+    .hero-content .subtitle {
+        font-size: 0.95em;
+    }
+    .hero-content .cta-button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1em;
+    }
     .services-grid,
     .pricing-grid,
     #why-choose-us .advantages-grid {
         grid-template-columns: 1fr;
-        gap: 12px;
-        padding: 0 4px;
+        gap: 10px;
+        padding: 0 2vw;
     }
     .service-item,
     .pricing-card,
     .advantage-item {
-        padding: 12px 6px;
-        font-size: 0.95em;
+        padding: 10px 4px;
+        font-size: 0.93em;
     }
     .service-item .service-icon,
     .advantage-item .advantage-icon-img,
     .pricing-card img {
-        max-width: 60px;
-        max-height: 60px;
+        max-width: 48px;
+        max-height: 48px;
+    }
+    #about .content {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .about-image {
+        max-width: 180px;
+        margin: 0 auto 10px auto;
+        float: none;
+    }
+    .section-title-container h2 {
+        font-size: 1em;
+        margin-bottom: 24px;
+    }
+    #contact-form {
+        padding: 16px;
+    }
+    #contact-form label {
+        font-size: 1em;
+    }
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 1em;
+        padding: 8px;
+    }
+    footer {
+        padding: 16px 0;
+    }
+    footer p {
+        font-size: 0.85em;
     }
 }
 
-/* Smallest screens */
+/* -------- Smallest screens (max-width: 400px) -------- */
 @media (max-width: 400px) {
-        header .container {
+    header .container {
         flex-direction: row;
         align-items: center;
         padding: 0 6px;
         gap: 0;
     }
-
     h2, .section-title-container h2 {
         font-size: 1em;
     }
@@ -971,5 +815,4 @@ footer a:hover {
     #main-nav ul li a {
         padding: 12px 12px;
     }
-    
 }
