@@ -53,6 +53,7 @@ section:nth-child(even) {
     float: right;
     margin-right: 20px;
     max-width: 400px;
+    height: 200px;
     border-radius: 8px;
 }
 
@@ -146,7 +147,7 @@ header nav ul li a:hover, main nav ul li a.active {
 /* Hero Section */
 #hero {
     background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
-                url('../IMAGES/LogoforDigi-BridgeSolutions.png') no-repeat center center/cover;
+                url('../IMAGES/LogoforDigi-BridgeSolutions.webp') no-repeat center center/cover;
     color: #fff;
     min-height: 38rem;
     display: flex;
@@ -586,7 +587,7 @@ footer a:hover {
         margin-bottom: 18px;
     }
     .section-title-container h2 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
         #hoverElement {
         top: 25px;
@@ -675,20 +676,21 @@ footer a:hover {
     #main-nav.active {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
     }
     #main-nav ul {
         flex-direction: column;
-        width: 100%;
+        width: 90%;
         padding: 0;
-        margin: 0;
-        align-items: flex-end;
+        margin: 10px;
+        align-items: center;
     }
     #main-nav ul li {
         display: block;
         margin: 0;
-        text-align: right;
-        border-bottom: 1px solid #34495e;
+        text-align: center;
+        border-bottom: 0.1px solid #cde0f4;
+        border-radius: 50px;
         width: 100%;
     }
     #main-nav ul li:last-child {
@@ -730,35 +732,35 @@ footer a:hover {
         height: 20px;
     }
     .hero-content h1 {
-        font-size: 1.1em;
+        font-size: 1.5em;
     }
     .hero-content .slogan,
     .hero-content .subtitle {
-        font-size: 0.95em;
+        font-size: 1em;
     }
     .hero-content .cta-button {
         width: 100%;
         padding: 10px 0;
-        font-size: 1em;
+        font-size: 1.3em;
     }
     .services-grid,
     .pricing-grid,
     #why-choose-us .advantages-grid {
         grid-template-columns: 1fr;
         gap: 10px;
-        padding: 0 2vw;
+        padding: 0 10vw;
     }
     .service-item,
     .pricing-card,
     .advantage-item {
-        padding: 10px 4px;
-        font-size: 0.93em;
+        padding: 10px 10px;
+        font-size: 1.2em;
     }
     .service-item .service-icon,
     .advantage-item .advantage-icon-img,
     .pricing-card img {
-        max-width: 48px;
-        max-height: 48px;
+        max-width: 50px;
+        max-height: 50px;
     }
     #about .content {
         flex-direction: column;
@@ -766,15 +768,16 @@ footer a:hover {
     }
     .about-image {
         max-width: 180px;
+
         margin: 0 auto 10px auto;
         float: none;
     }
     .section-title-container h2 {
-        font-size: 1em;
-        margin-bottom: 24px;
+        font-size: 2em;
+        margin-bottom: 20px;
     }
     #contact-form {
-        padding: 16px;
+        padding: 20px;
     }
     #contact-form label {
         font-size: 1em;
