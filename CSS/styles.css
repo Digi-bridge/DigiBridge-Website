@@ -210,7 +210,7 @@ header nav ul li a:hover, main nav ul li a.active {
     margin-right: auto;
     color: #d6eaf8;
 }
-.hero-content .cta-button {
+ .cta-button {
     display: inline-block;
     background: linear-gradient(90deg, #3498db 0%, #5dade2 100%);
     color: #fff;
@@ -427,6 +427,48 @@ header nav ul li a:hover, main nav ul li a.active {
     width: 150px;
     height: 150px;
     margin-bottom: 15px;
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(44,62,80,0.55);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: #fff;
+    color: #222;
+    padding: 32px 24px;
+    border-radius: 10px;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.22);
+    position: relative;
+    display: flex;
+}
+.modal-content .modal-logo {
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    
+}
+.modal .close {
+    position: absolute;
+    top: 12px; right: 18px;
+    font-size: 2em;
+    color: #3498db;
+    cursor: pointer;
+}
+.modal .content  p , ul , a{
+    font-size: 0.7rem;
 }
 
 /* Contact Section */

@@ -38,9 +38,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+        // Pricing Modal
+    document.querySelectorAll('.pricing-card h3[data-modal]').forEach(h3 => {
+        h3.style.cursor = 'pointer';
+        h3.addEventListener('click', function() {
+            const modalId = h3.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) modal.style.display = 'flex';
+        });
+    });
+    document.querySelectorAll('.modal .close').forEach(btn => {
+        btn.addEventListener('click', function() {
+            btn.closest('.modal').style.display = 'none';
+        });
+    });
+    window.addEventListener('click', function(e) {
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+        }
+    });
+
     // Set current year in footer
     const currentYearElement = document.getElementById('currentYear');
     if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear();
     }
+
 });
