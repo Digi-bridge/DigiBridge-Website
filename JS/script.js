@@ -64,4 +64,49 @@ document.addEventListener('DOMContentLoaded', function() {
         currentYearElement.textContent = new Date().getFullYear();
     }
 
+    // Auth modal elements
+    const loginModal = document.getElementById('auth-login-modal');
+    const signupModal = document.getElementById('auth-signup-modal');
+    const openLogin = document.getElementById('open-login');
+    const openSignup = document.getElementById('open-signup');
+    const closeLogin = document.getElementById('auth-close-login');
+    const closeSignup = document.getElementById('auth-close-signup');
+    const switchToSignup = document.getElementById('auth-switch-to-signup');
+    const switchToLogin = document.getElementById('auth-switch-to-login');
+
+    // Open Login Modal
+    if (openLogin) openLogin.onclick = function(e) {
+        e.preventDefault();
+        loginModal.style.display = 'flex';
+    };
+    // Open Signup Modal
+    if (openSignup) openSignup.onclick = function(e) {
+        e.preventDefault();
+        signupModal.style.display = 'flex';
+    };
+    // Close Login Modal
+    if (closeLogin) closeLogin.onclick = function() {
+        loginModal.style.display = 'none';
+    };
+    // Close Signup Modal
+    if (closeSignup) closeSignup.onclick = function() {
+        signupModal.style.display = 'none';
+    };
+    // Switch to Signup
+    if (switchToSignup) switchToSignup.onclick = function(e) {
+        e.preventDefault();
+        loginModal.style.display = 'none';
+        signupModal.style.display = 'flex';
+    };
+    // Switch to Login
+    if (switchToLogin) switchToLogin.onclick = function(e) {
+        e.preventDefault();
+        signupModal.style.display = 'none';
+        loginModal.style.display = 'flex';
+    };
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        if (event.target === loginModal) loginModal.style.display = 'none';
+        if (event.target === signupModal) signupModal.style.display = 'none';
+    };
 });

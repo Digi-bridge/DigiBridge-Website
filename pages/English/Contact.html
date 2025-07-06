@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Digi-Bridge Solutions</title>
+    <link rel="stylesheet" href="../../CSS/styles.css">
+    <link rel="icon" href="../../IMAGES/LogoforDigi-BridgeSolutions.webp" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a id="logo" href="Home.html">
+                <img src="../../IMAGES/1.webp" alt="Digi-Bridge Logo">
+                <span>Digi-Bridge Solutions</span>
+            </a>
+            <div class="nav-container">
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="About-us.html" class="active">About</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main style="margin-top: 80px;">
+        <section id="contact">
+            <div class="container">
+                <div class="section-title-container">
+                    <h2>Get in Touch</h2>
+                </div>
+                <p class="contact-info">
+                    We are here to help you with your digital needs. Whether you have questions about our services, need assistance with a project, or want to discuss your requirements, feel free to reach out!
+                    <br> Fill out the form below, and we will get back to you as soon as possible.
+                </p>
+                <p class="contact-info">
+                    You can also contact us via WhatsApp at <strong><a href="https://wa.me/message/N665QFDKDSL5M1">+256 726 050 017</a></strong> or email us at <strong><a href="mailto:info@digibridgeug.com">info@digibridgeug.com</a></strong>.
+                </p>
+                <h3>Scan me</h3>
+                <img style="width: 100px;" src="../../IMAGES/QRcode.jpg" alt="QR Code" loading="lazy">
+
+                <h3>Contact Form</h3>
+                <form id="contact-form" name="contact" data-netlify="true">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="service">Interested Service:</label>
+                    <input type="text" id="service" name="service" list="service-options">
+                    <datalist id="service-options">
+                        <option value="CV Writing">
+                        <option value="Portfolio Website">
+                        <option value="Document Formatting">
+                        <option value="Cover Letter">
+                        <option value="Student Pack">
+                        <option value="Other Services">
+                    </datalist>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit" class="cta-button">Send Message</button>
+                    <p class="hidden" style="display: none;">
+                        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                    </p>
+                </form>
+
+                <div class="contact-info">
+                    <p>We mainly use <strong>WhatsApp Business</strong> at <strong><a href="https://wa.me/message/N665QFDKDSL5M1">+256 726 050 017</a></strong> for client management and digital service delivery. Contact us to discuss your needs!</p>
+                    <p>You can also connect with us by promoting our services to students in 
+                        <img class="logo" src="../../IMAGES/WhatsAppIcon.jpg" loading="lazy" alt="whatsapp"> WhatsApp /
+                        <img class="logo" src="../../IMAGES/FacebookIcon.jpg" alt="Facebook" loading="lazy"> Facebook groups.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Digi-Bridge Solutions. All rights reserved.</p>
+        <p>
+            <a href="mailto:info@digibridge.com">info@digibridge.com</a> |
+            <a href="tel:+256700000000">+256 700 000 000</a>
+        </p>
+    </footer>
+</body>
+</html>

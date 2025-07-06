@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digi-Bridge Solutions</title>
+    <link rel="stylesheet" href="../../CSS/styles.css">
+    <link rel="icon" href="../../IMAGES/LogoforDigi-BridgeSolutions.webp">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo-container">
+            <a href="#hero" id="logo">
+                <img src="../../IMAGES/1.webp" alt="logo">Digi-Bridge Solutions
+            </a>
+        </div>
+        <div class="nav-container">
+            <button class="menu-toggle" id="mobile-menu" aria-label="Open menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="main-nav" role="navigation">
+                <ul class="nav-list">
+                    <li><a href="./Home.html" class="active">Home</a></li>
+                    <li><a href="./Services.html">Services</a></li>
+                    <li><a href="./Contact.html">Contact</a></li>
+                    <li><a href="./About-us.html">About us</a></li>
+                    <li><a href="#" onclick="netlifyIdentity.open('login');return false;">Login</a></li>
+                    <li><a href="#" onclick="netlifyIdentity.open('signup');return false;">Sign Up</a></li>
+                    <li><a href="#" onclick="netlifyIdentity.open();return false;" id="profile-link" style="display:none;">Profile</a></li>
+                </ul>
+            </nav>
+            <div >
+                <a href="../../index.html" title="Switch to French"><h3 class="lang-switch">🌐</h3></a>
+            </div>
+
+        </div>
+    </div>
+</header>
+<main>
+    <section id="hero">
+    
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Digi-Bridge Solutions</h1>
+            <p class="slogan">Empowering Students and Businesses with Digital Solutions</p>
+            <p class="subtitle">
+                We help students succeed academically and assist small businesses in building a 
+                strong digital presence through smart, reliable, and done-for-you services.
+            </p>
+            <a href="#contact" class="cta-button">Get Started <span style="margin-left:8px;">&#8594;</span></a>
+            <a href="#contact" class="cta-button">Contact Us <span style="margin-left:8px;">&#8594;</span></a>
+        </div>
+    </section>
+
+    <section id="why-choose-us">
+        <div class="container">
+            <div class="section-title-container">
+                <h2>Why Choose Us?</h2>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <img class="advantage-icon-img" src="IMAGES/IconForWhyShooseUsStudent.jpg" alt="We are students" loading="lazy">
+                    <h3>We Are Students Too</h3>
+                    <p>We deeply understand your needs and challenges because we share similar experiences.</p>
+                </div>
+                <div class="advantage-item">
+                    <img class="advantage-icon-img" src="IMAGES/IconForWhyShooseUsOnline&Efficient.jpg" alt="Efficient" loading="lazy">
+                    <h3>Online & Efficient</h3>
+                    <p>Our services are fast, affordable, and flexible, delivered entirely online for your convenience.</p>
+                </div>
+                <div class="advantage-item">
+                    <img class="advantage-icon-img" src="IMAGES/IconForWhyShooseUsMultiLanguage.jpg" alt="Multi language" loading="lazy">
+                    <h3>Multilingual Support</h3>
+                    <p>We welcome a diverse student body with services in English and French.</p>
+                </div>
+                <div class="advantage-item">
+                    <img class="advantage-icon-img" src="IMAGES/IconForWhyShooseUsUniqueServiceCombo.jpg" alt="Service combo" loading="lazy">
+                    <h3>Unique Service Combination</h3>
+                    <p>We offer a distinctive blend of digital development and essential administrative support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p>&copy; <span id="currentYear"></span> Digi-Bridge Solutions. All rights reserved.</p>
+        <p>Slogan: "Digital support for students, by students."</p>
+    </div>
+</footer>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="../../JS/script.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      document.getElementById('profile-link').style.display = user ? 'inline' : 'none';
+    });
+    window.netlifyIdentity.on("login", () => {
+      document.getElementById('profile-link').style.display = 'inline';
+    });
+    window.netlifyIdentity.on("logout", () => {
+      document.getElementById('profile-link').style.display = 'none';
+    });
+  }
+</script>
+</body>
+</html>
