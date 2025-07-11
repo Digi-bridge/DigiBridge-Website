@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Digi-Bridge Solutions</title>
+    <link rel="stylesheet" href="../../CSS/indexcssMQ.css">
     <link rel="stylesheet" href="../../CSS/styles.css">
     <link rel="icon" href="../../IMAGES/LogoforDigi-BridgeSolutions.webp" type="image/x-icon">
 </head>
@@ -14,21 +15,44 @@
                 <img src="../../IMAGES/1.webp" alt="Digi-Bridge Logo">
                 <span>Digi-Bridge Solutions</span>
             </a>
-            <div class="nav-container">
-                <nav id="main-nav">
-                    <ul>
-                        <li><a href="Home.html">Home</a></li>
-                        <li><a href="Services.html">Services</a></li>
-                        <li><a href="About-us.html" class="active">About</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="nav-container">
+            <button class="menu-toggle" id="mobile-menu" aria-label="Open menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="main-nav" role="navigation">
+                <ul class="nav-list">
+                    <li><a href="./Home.html" >Home</a></li>
+                    <li><a href="./Services.html"class="active">Services</a></li>
+                    <li><a href="./Contact.html">Contact</a></li>
+                    <li><a href="./About-us.html">About us</a></li>
+                </ul>
+            </nav>
+
+        </div>
         </div>
     </header>
 
-    <main style="margin-top: 80px;">
-        <section id="services">
+    <main>
+                                <!-- HERO -->
+    <section id="hero">
+    
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Digi-Bridge Solutions</h1>
+            <p class="slogan">Empowering Students and Businesses with Digital Solutions</p>
+        </div>
+    </section>
+    <div class="subtitle">
+        <img src="../../IMAGES/mks.webp" alt="mks">
+        <p>
+        Our services are grouped to meet the unique needs of students, professionals and business owners. <br>
+         We offer practical, done-for-you solutions—no training required.
+
+        </p>
+    </div>
+                                            <!-- SERVICE -->
+    <section id="services">
             <div class="container">
                 <div class="section-title-container">
                     <h2>Our Services</h2>
@@ -190,17 +214,20 @@
     </main>
 
 <footer>
-    <div class="container">
-        <p>&copy; <span id="currentYear"></span> Digi-Bridge Solutions. All rights reserved.</p>
-        <p>Slogan: "Digital support for students, by students."</p>
+                <p>&copy; <span id="currentYear"></span> Digi-Bridge Solutions. All rights reserved.
+                    <br> Slogan: "Digital support for students, by students."</p>
+        <div class="links">
+            <a href="pages/English/Home.html">Home</a>
+            <a href="">| FAQ | </a>
+            <a href="pages/English/About-us.html">Digi-Bridge</a>
+        </div>
+
         <div class="social-media">
             <a href="https://wa.me/message/N665QFDKDSL5M1" title="WhatsApp"><img src="../../IMAGES/Whatsapp.png" alt="facebook"></a>
-            <a href="https://www.facebook.com/DigiBridgeSolutions" title="LinkedIn"><img style="width: 60px;" src="../../IMAGES/LinkedIn.png" alt="facebook"></a>
-            <a href="mailto:sdigibridge@gmail.com" title="Email"><img style="width: 75px;" src="../../IMAGES/Email.png" alt="Email"></a>
+            <a href="https://www.facebook.com/DigiBridgeSolutions" title="LinkedIn"><img class="linkedin" " src="../../IMAGES/LinkedIn.png" alt="facebook"></a>
+            <a href="mailto:sdigibridge@gmail.com" title="Email"><img class="email"  src="../../IMAGES/Email.png" alt="Email"></a>
             <a href="https://www.facebook.com/DigiBridgeSolutions" title="Facebook"><img src="../../IMAGES/facebook.png" alt="facebook"></a>
         </div>
-   
-    </div>
 </footer>
     <script src="../../JS/script.js"></script>
 
