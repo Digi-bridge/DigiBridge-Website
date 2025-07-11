@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digi-Bridge Solutions</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/indexcss.css">
+    <link rel="stylesheet" href="CSS/indexcssMQ.css">
     <link rel="icon" href="IMAGES/LogoforDigi-BridgeSolutions.png">
 
 </head>
@@ -12,46 +14,68 @@
 
 <header>
     <div class="container">
-        <a href="#hero" id="logo">
-            <img src="IMAGES/1.webp" alt="logo">Digi-Bridge Solutions
-        </a>
+        <div class="logo-container">
+            <a href="" id="logo">
+                <img src="IMAGES/1.webp" alt="logo">Digi-Bridge Solutions
+            </a>
+        </div>
     </div>
 </header>
-<style>
-    #hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
-                url('IMAGES/LogoforDigi-BridgeSolutions.webp') no-repeat center center/cover;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 100px;
-    box-sizing: border-box;
-    position: relative;
-}
 
-</style>
     <main>
         <section id="hero">
-        <div class="hero-content">
-            <h1>Digi-Bridge Solutions</h1>
-            <p class="slogan">"Digital Support for Students, by Students."</p>
-            <p style="margin-top: 0px; margin-bottom: 40px;"  class="slogan">"Soutien numérique pour les étudiants, par des étudiants."</p>
-            <div class="language-selector">
-                <a href="./pages/English/Home.html" class="cta-button">English</a>
-                <a href="./french-page.html" class="cta-button">Francais</a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>welcome to Digi-Bridge Solutions</h1>
+                    <p class="slogan">"Digital Support for Students, by Students."</p>
+                    <p  class="slogan">"Soutien numérique pour les étudiants, par des étudiants."</p>
+
+                </div>
+                
+                <div class="language-selector">
+                    <p>Select your preferd Language </p>
+                    <p>Selectionner votre Langue </p>
+
+                    <a href="./pages/English/Home.html" class="cta-button">English</a>
+                    <a href="./french-page.html" class="cta-button">Francais</a>
+
+                </div>
             </div>
-        </div>
+            <div class="hero-box">
+                <div class="hero-image-text">
+                    <h3>We help students succeed academically and assist small businesses in building a strong digital presence 
+                        through smart, reliable, and done-for-you services.
+                    </h3>
+                    <ul>
+                        <li><strong>🎓 Students</strong></li>
+                        <p>Whether you're applying for a scholarship, editing your final paper, or polishing your CV, we provide hands-on support to help you succeed.</p>
+                        <li><Strong>💼 Business Owners</Strong></li>
+                        <p>Ready to take your business online? We set up websites, social media, and branding tools so your business can grow digitally—without the tech headache.</p>
+                    </ul>
+                </div>
+
+                <div class="hero-image">
+                    <img src="IMAGES/tai.webp" alt="tai" loading="lazy">
+                </div>
+
+            </div>
+       
         </section>
 
+    </main>
+
     <footer>
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> Digi-Bridge Solutions. All Rights Reserved.</p>
-            <p>Slogan: "Digital Support for Students, by Students."</p>
-            </div>
+    <div class="container">
+        <p>&copy; <span id="currentYear"></span> Digi-Bridge Solutions. All rights reserved.</p>
+        <p>Slogan: "Digital support for students, by students."</p>
+        <div class="social-media">
+            <a href="https://wa.me/message/N665QFDKDSL5M1" title="WhatsApp"><img src="../../IMAGES/Whatsapp.png" alt="facebook"></a>
+            <a href="https://www.facebook.com/DigiBridgeSolutions" title="LinkedIn"><img class="linkedin" " src="../../IMAGES/LinkedIn.png" alt="facebook"></a>
+            <a href="mailto:sdigibridge@gmail.com" title="Email"><img class="email"  src="../../IMAGES/Email.png" alt="Email"></a>
+            <a href="https://www.facebook.com/DigiBridgeSolutions" title="Facebook"><img src="../../IMAGES/facebook.png" alt="facebook"></a>
+        </div>
+   
+    </div>
     </footer>
 
     <script src="JS/script.js"></script>
