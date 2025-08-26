@@ -209,13 +209,14 @@
     .hero-image-text ul li {
     font-size: 1.3em;
     }
-        #hero .cta-button {
+    .hero .cta-button {
+
     font-size: 0.9em;
     font-weight: 700;
     padding: 8px 0;
     margin: 0;
     margin-bottom: 10px;
-    width: 70%;
+    width: 50%;
     }
 
 
@@ -256,7 +257,7 @@
     font-size: 0.7em;
     padding: 6px 0;
     margin-bottom: 10px;
-    width: 50%;
+    width: 25%;
     }
 
     #hero .hero-box p{
