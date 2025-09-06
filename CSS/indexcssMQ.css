@@ -28,7 +28,7 @@
         font-size: 0.8em;
         margin:  20px 0;
         font-display:fallback ;
-        font-weight: 700px;
+        font-weight: 700;
     }
     .hero-image-text h3 {
         font-size: 0.9em;
@@ -269,7 +269,7 @@
         font-size: 0.8em;
         margin: 20px;
         font-display:fallback ;
-        font-weight: 700px;
+        font-weight: 700;
     }
     #hero h3 {
         font-size: 0.8em;

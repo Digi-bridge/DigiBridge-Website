@@ -136,10 +136,10 @@ header .nav-list li a:hover {
 }
 .hero-image-text p {
     font-size: 1.4em;
-    font-weight: 700px;
+    font-weight: 700;
 }
 .hero-image-text ul {
-  font-weight:900px;
+  font-weight:900;
   text-align: left;
     padding: 0;
     margin: 0;
